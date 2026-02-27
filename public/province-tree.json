@@ -1,0 +1,70 @@
+{
+    "treeData": [
+      {
+        "title": "三峡集团",
+        "key": "group",
+        "children": [
+          {
+            "title": "xxx省分公司",
+            "key": "province_1",
+            "isLeaf": true
+          },
+          {
+            "title": "xxx省分公司",
+            "key": "province_2",
+            "isLeaf": true
+          },
+          {
+            "title": "xxx省分公司",
+            "key": "province_3",
+            "isLeaf": true
+          },
+          {
+            "title": "xxx省分公司",
+            "key": "province_4",
+            "isLeaf": true
+          },
+          {
+            "title": "xxx省分公司",
+            "key": "province_5",
+            "isLeaf": true
+          },
+          {
+            "title": "xxx省分公司",
+            "key": "province_6",
+            "isLeaf": true
+          },
+          {
+            "title": "xxx省分公司",
+            "key": "province_7",
+            "isLeaf": true
+          },
+          {
+            "title": "xxx省分公司",
+            "key": "province_8",
+            "isLeaf": true
+          },
+          {
+            "title": "xxx省分公司",
+            "key": "province_9",
+            "isLeaf": true
+          },
+          {
+            "title": "xxx省分公司",
+            "key": "province_10",
+            "isLeaf": true
+          }
+        ]
+      }
+    ],
+    "treeConfig": {
+      "defaultExpandedKeys": ["group"],
+      "showLine": true,
+      "defaultSelectedKeys": ["province_1"],
+      "style": {
+        "backgroundColor": "#0F2942",
+        "color": "#fff",
+        "padding": "8px 0"
+      }
+    }
+}

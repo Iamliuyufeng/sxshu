@@ -1,0 +1,40 @@
+.sx-section-box {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: rgba(26,69,148,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    .sx-section-title {
+        background: linear-gradient( 90deg, #1A5D94 0%, rgba(8,29,46,0) 100%);
+        display: flex;
+        height: 40px;
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        overflow: hidden;
+        align-items: center;
+        .horline {
+            width: 4px;
+            height: 16px;
+            background: #00F0FF;
+        }
+        .title-text {
+            margin-left: 20px;
+            font-weight: normal;
+            font-size: 18px;
+            color: #FFFFFF;
+            line-height: 21px;
+            text-align: left;
+            font-style: normal;
+        }
+        .extra {
+            margin-left: auto;
+            overflow: hidden;
+        }
+    }
+    .sx-section-content {
+        flex:1;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,118 @@
+.appeal {
+    background: #001732;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    .appeal-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .action-bar {
+        display: flex;
+        color: #FFFFFF;
+        display: flex;
+        gap: 6px;
+        align-items: center;
+    }
+}
+
+/* 新增场站申诉、多选 */
+.create-appeal {
+    .range {
+        padding: 0 4px 14px 4px;
+        width: 100%;
+        border-bottom: 1px solid #133250;
+    }
+    .action-bar {
+        padding: 14px 4px;
+    }
+    .province {
+        .select-prov {
+            gap: 10px;
+            margin: 12px 0;
+            height: 80px;
+            padding: 24px;
+            box-sizing: border-box;
+            display: flex;
+            background-size: cover;
+            background-image: url('../assets/image/province-bg.png');
+            align-items: center;
+            .choose {
+                font-size: 18px;
+                color: #FFFFFF;
+            }
+            .code {
+                font-size: 14px;
+                color: #FFFFFF;
+                margin-left: 150px;
+            }
+            .code-number {
+                font-size: 18px;
+                color: #FFFFFF;
+            }
+            .score {
+                font-size: 22px;
+                color: #FFFFFF;
+                margin-left: auto;
+                margin-right: 36px;
+            }
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+    .form-item {
+        display: flex;
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+    
+    .label {
+        margin-right: 8px;
+        margin-top: 4px;
+    }
+}
+
+
+.appeal-success {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    .text {
+        color: #fff;
+    }
+}
+
+/* 申诉编辑列表 */
+.appeal-edit {
+    height: calc(100vh - 221px);
+    overflow-y: auto;
+}
+/* 单个场站申诉详情 */
+.single-appeal {
+    .line {
+        margin: 20px 0px;
+        display: flex;
+        width: 100%;
+        .form-item {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            color: #fff;
+            .label {
+                width: 75px;
+                font-size: 14px;
+                color: #fefefeb0;
+                text-align: right;
+                margin-right: 8px;
+            }
+            .value {
+                font-size: 14px;
+            }
+        }
+    }
+}

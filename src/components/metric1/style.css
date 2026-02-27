@@ -1,0 +1,28 @@
+.sx-metric-1 {
+    width: 195px;
+    height: 100px;
+    background: rgba(26,69,148,0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sx-metric-1 .sx-label {
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 18px;
+    text-align: left;
+    font-style: normal;
+}
+
+.sx-metric-1 .sx-value {
+    font-family: YouSheBiaoTiHei;
+    font-size: 28px;
+    color: #00F0FF;
+    line-height: 36px;
+    text-align: left;
+    font-style: normal;
+}

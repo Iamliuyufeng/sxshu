@@ -1,0 +1,207 @@
+{
+    "items": [
+        {
+            "key": "1",
+            "serialNumber": 1,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意描述示意描述示意",
+            "powerGeneration": 14.2445,
+            "theoreticalValue": 14.2445,
+            "gridValue": 14.2445
+        },
+        {
+            "key": "2",
+            "serialNumber": 2,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意",
+            "powerGeneration": 16.2452,
+            "theoreticalValue": 16.2452,
+            "gridValue": 16.2452
+        },
+        {
+            "key": "3",
+            "serialNumber": 3,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意",
+            "powerGeneration": 25.2901,
+            "theoreticalValue": 25.2901,
+            "gridValue": 25.2901
+        },
+        {
+            "key": "4",
+            "serialNumber": 4,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意示意",
+            "powerGeneration": 14.2445,
+            "theoreticalValue": 14.2445,
+            "gridValue": 14.2445
+        },
+        {
+            "key": "5",
+            "serialNumber": 5,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意",
+            "powerGeneration": 16.2452,
+            "theoreticalValue": 16.2452,
+            "gridValue": 16.2452
+        },
+        {
+            "key": "6",
+            "serialNumber": 6,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意",
+            "powerGeneration": 25.2901,
+            "theoreticalValue": 25.2901,
+            "gridValue": 25.2901
+        },
+        {
+            "key": "7",
+            "serialNumber": 7,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意描述示意",
+            "powerGeneration": 14.2445,
+            "theoreticalValue": 14.2445,
+            "gridValue": 14.2445
+        },
+        {
+            "key": "8",
+            "serialNumber": 8,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述描述示意描述示意",
+            "powerGeneration": 16.2452,
+            "theoreticalValue": 16.2452,
+            "gridValue": 16.2452
+        },
+        {
+            "key": "9",
+            "serialNumber": 9,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意",
+            "powerGeneration": 25.2901,
+            "theoreticalValue": 25.2901,
+            "gridValue": 25.2901
+        },
+        {
+            "key": "10",
+            "serialNumber": 10,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意",
+            "powerGeneration": 14.2445,
+            "theoreticalValue": 14.2445,
+            "gridValue": 14.2445
+        },
+        {
+            "key": "11",
+            "serialNumber": 11,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意示意描述示意描述示意",
+            "powerGeneration": 16.2452,
+            "theoreticalValue": 16.2452,
+            "gridValue": 16.2452
+        },
+        {
+            "key": "12",
+            "serialNumber": 12,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意",
+            "powerGeneration": 25.2901,
+            "theoreticalValue": 25.2901,
+            "gridValue": 25.2901
+        },
+        {
+            "key": "13",
+            "serialNumber": 13,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意描述示意",
+            "powerGeneration": 14.2445,
+            "theoreticalValue": 14.2445,
+            "gridValue": 14.2445
+        },
+        {
+            "key": "14",
+            "serialNumber": 14,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意示意",
+            "powerGeneration": 16.2452,
+            "theoreticalValue": 16.2452,
+            "gridValue": 16.2452
+        },
+        {
+            "key": "15",
+            "serialNumber": 15,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意",
+            "powerGeneration": 25.2901,
+            "theoreticalValue": 25.2901,
+            "gridValue": 25.2901
+        },
+        {
+            "key": "16",
+            "serialNumber": 16,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意",
+            "powerGeneration": 14.2445,
+            "theoreticalValue": 14.2445,
+            "gridValue": 14.2445
+        },
+        {
+            "key": "17",
+            "serialNumber": 17,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意",
+            "powerGeneration": 16.2452,
+            "theoreticalValue": 16.2452,
+            "gridValue": 16.2452
+        },
+        {
+            "key": "18",
+            "serialNumber": 18,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意",
+            "powerGeneration": 25.2901,
+            "theoreticalValue": 25.2901,
+            "gridValue": 25.2901
+        },
+        {
+            "key": "19",
+            "serialNumber": 19,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意描述示意",
+            "powerGeneration": 14.2445,
+            "theoreticalValue": 14.2445,
+            "gridValue": 14.2445
+        },
+        {
+            "key": "20",
+            "serialNumber": 20,
+            "date": "2025-12-09 22:10:14",
+            "abnormalIndex": "有效性",
+            "abnormalDesc": "描述示意描述示意描述示意",
+            "powerGeneration": 16.2452,
+            "theoreticalValue": 16.2452,
+            "gridValue": 16.2452
+        }
+    ],
+    "count": 320,
+    "pageSize": 20,
+    "current": 1
+}

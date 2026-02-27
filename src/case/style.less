@@ -1,0 +1,86 @@
+.case-analysis {
+    background-color: rgba(0, 19, 43, 1);
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    .case-analysis-content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        height: 100%;
+        overflow: hidden;
+    
+        .action-bar {
+            color: #FFFFFF;
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        .chart-list {
+            display: flex;
+            height: 337px;
+            gap: 16px;
+            >.sx-section-box {
+                flex: 1;
+            }
+            .ring-with-legend {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                justify-content: center;
+                gap: 40px;
+                .ring-container {
+                    position: relative;
+                    width: 260px;
+                    height: 260px;
+                    img {
+                        width: 260px;
+                        height: 260px;
+                        position: absolute;
+                    }
+                }
+                .legend-list {
+                    display: flex;
+                    gap: 10px;
+                    width: 240px;
+                    flex-wrap: wrap;
+                    height: 250px;
+                    overflow: auto;
+                }
+            }
+        }
+        .chart-table {
+        }
+    }
+}
+
+
+.ring-legend {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 5px); /* 5px是gap的一半（gap:10px），抵消间距的影响 */
+    gap: 10px;
+    .indicator {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        .box {
+            width: 12px;
+            height: 12px;
+        }
+        .label {
+            color: #FFFFFF;
+            font-size: 12px;
+        }
+    }
+    .value {
+        font-size: 20px;
+        color: #00F0FF;
+        line-height: 23px;
+    }
+}
+
+.case-detail {
+    height: 660px;
+}

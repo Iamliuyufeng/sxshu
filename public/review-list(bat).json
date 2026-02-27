@@ -1,0 +1,227 @@
+{
+    "items": [
+        {
+            "key": "1",
+            "ranking": 1,
+            "province": "江苏省",
+            "station": "南京江宁光伏场站",
+            "mainWiringDiagram": 99,
+            "powerData": 98.5,
+            "statusData": 99.2,
+            "faultData": 97.8,
+            "totalScore": 98.5
+        },
+        {
+            "key": "2",
+            "ranking": 2,
+            "province": "浙江省",
+            "station": "杭州钱塘风电场站",
+            "mainWiringDiagram": 98.2,
+            "powerData": 97.3,
+            "statusData": 98.1,
+            "faultData": 96.9,
+            "totalScore": 97.4
+        },
+        {
+            "key": "3",
+            "ranking": 3,
+            "province": "广东省",
+            "station": "深圳南山储能场站",
+            "mainWiringDiagram": 97.5,
+            "powerData": 96.8,
+            "statusData": 97.5,
+            "faultData": 95.7,
+            "totalScore": 96.7
+        },
+        {
+            "key": "4",
+            "ranking": 4,
+            "province": "山东省",
+            "station": "青岛黄岛光伏场站",
+            "mainWiringDiagram": 96.3,
+            "powerData": 95.6,
+            "statusData": 96.3,
+            "faultData": 94.8,
+            "totalScore": 95.6
+        },
+        {
+            "key": "5",
+            "ranking": 5,
+            "province": "四川省",
+            "station": "成都天府风电场站",
+            "mainWiringDiagram": 95.8,
+            "powerData": 94.2,
+            "statusData": 95.8,
+            "faultData": 93.5,
+            "totalScore": 94.5
+        },
+        {
+            "key": "6",
+            "ranking": 6,
+            "province": "河南省",
+            "station": "郑州中原光伏场站",
+            "mainWiringDiagram": 94.1,
+            "powerData": 92.7,
+            "statusData": 94.1,
+            "faultData": 92.3,
+            "totalScore": 93
+        },
+        {
+            "key": "7",
+            "ranking": 7,
+            "province": "湖北省",
+            "station": "武汉光谷储能场站",
+            "mainWiringDiagram": 93.2,
+            "powerData": 91.5,
+            "statusData": 93.2,
+            "faultData": 91.1,
+            "totalScore": 91.9
+        },
+        {
+            "key": "8",
+            "ranking": 8,
+            "province": "湖南省",
+            "station": "长沙岳麓风电场站",
+            "mainWiringDiagram": 92,
+            "powerData": 90.3,
+            "statusData": 92,
+            "faultData": 89.8,
+            "totalScore": 90.7
+        },
+        {
+            "key": "9",
+            "ranking": 9,
+            "province": "河北省",
+            "station": "石家庄正定光伏场站",
+            "mainWiringDiagram": 90.5,
+            "powerData": 88.9,
+            "statusData": 90.5,
+            "faultData": 88.2,
+            "totalScore": 89.2
+        },
+        {
+            "key": "10",
+            "ranking": 10,
+            "province": "安徽省",
+            "station": "合肥滨湖储能场站",
+            "mainWiringDiagram": 89.3,
+            "powerData": 87.6,
+            "statusData": 89.3,
+            "faultData": 87.1,
+            "totalScore": 88
+        },
+        {
+            "key": "11",
+            "ranking": 11,
+            "province": "福建省",
+            "station": "厦门翔安风电场站",
+            "mainWiringDiagram": 88.4,
+            "powerData": 86.2,
+            "statusData": 88.4,
+            "faultData": 85.9,
+            "totalScore": 86.8
+        },
+        {
+            "key": "12",
+            "ranking": 12,
+            "province": "陕西省",
+            "station": "西安未央光伏场站",
+            "mainWiringDiagram": 87.2,
+            "powerData": 84.7,
+            "statusData": 87.2,
+            "faultData": 84.3,
+            "totalScore": 85.4
+        },
+        {
+            "key": "13",
+            "ranking": 13,
+            "province": "山西省",
+            "station": "太原晋源储能场站",
+            "mainWiringDiagram": 86.1,
+            "powerData": 83.5,
+            "statusData": 86.1,
+            "faultData": 82.8,
+            "totalScore": 84.1
+        },
+        {
+            "key": "14",
+            "ranking": 14,
+            "province": "辽宁省",
+            "station": "大连金州风电场站",
+            "mainWiringDiagram": 84.5,
+            "powerData": 81.9,
+            "statusData": 84.5,
+            "faultData": 81.2,
+            "totalScore": 82.5
+        },
+        {
+            "key": "15",
+            "ranking": 15,
+            "province": "云南省",
+            "station": "昆明滇池光伏场站",
+            "mainWiringDiagram": 83.3,
+            "powerData": 80.6,
+            "statusData": 83.3,
+            "faultData": 79.7,
+            "totalScore": 81.2
+        },
+        {
+            "key": "16",
+            "ranking": 16,
+            "province": "广西壮族自治区",
+            "station": "南宁青秀储能场站",
+            "mainWiringDiagram": 81.5,
+            "powerData": 78.3,
+            "statusData": 81.5,
+            "faultData": 77.9,
+            "totalScore": 79.2
+        },
+        {
+            "key": "17",
+            "ranking": 17,
+            "province": "吉林省",
+            "station": "长春净月风电场站",
+            "mainWiringDiagram": 80.1,
+            "powerData": 76.8,
+            "statusData": 80.1,
+            "faultData": 76.2,
+            "totalScore": 77.7
+        },
+        {
+            "key": "18",
+            "ranking": 18,
+            "province": "黑龙江省",
+            "station": "哈尔滨松北光伏场站",
+            "mainWiringDiagram": 78.3,
+            "powerData": 74.5,
+            "statusData": 78.3,
+            "faultData": 74.1,
+            "totalScore": 75.6
+        },
+        {
+            "key": "19",
+            "ranking": 19,
+            "province": "贵州省",
+            "station": "贵阳观山湖储能场站",
+            "mainWiringDiagram": 76.8,
+            "powerData": 72.1,
+            "statusData": 76.8,
+            "faultData": 71.5,
+            "totalScore": 73.5
+        },
+        {
+            "key": "20",
+            "ranking": 20,
+            "province": "甘肃省",
+            "station": "兰州七里河风电场站",
+            "mainWiringDiagram": 75.2,
+            "powerData": 70.5,
+            "statusData": 75.2,
+            "faultData": 69.8,
+            "totalScore": 71.8
+        }
+    ],
+    "count": 320,
+    "pageSize": 20,
+    "current": 1
+}

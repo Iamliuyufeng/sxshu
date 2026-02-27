@@ -1,0 +1,29 @@
+/* 定义自定义字体家族 */
+@font-face {
+    /* 字体名称（自定义，后续使用时引用这个名称） */
+    font-family: 'fzlthk';
+    /* 字体文件路径（根据实际路径调整） */
+    src: url('./fonts/fzlthk.woff') format('woff');
+    /* 可选：添加其他字体格式（增强浏览器兼容性） */
+    /* 字体权重（常规为400，粗体为700，需与字体文件对应） */
+    font-weight: 400;
+    /* 字体样式（正常/斜体） */
+    font-style: normal;
+    /* 可选：字体显示策略，优化加载体验 */
+    font-display: swap;
+}
+
+/* 定义自定义字体家族 */
+@font-face {
+    /* 字体名称（自定义，后续使用时引用这个名称） */
+    font-family: 'YouSheBiaoTiHei';
+    /* 字体文件路径（根据实际路径调整） */
+    src: url('./fonts/YouSheBiaoTiHei.woff') format('woff');
+    /* 可选：添加其他字体格式（增强浏览器兼容性） */
+    /* 字体权重（常规为400，粗体为700，需与字体文件对应） */
+    font-weight: 400;
+    /* 字体样式（正常/斜体） */
+    font-style: normal;
+    /* 可选：字体显示策略，优化加载体验 */
+    font-display: swap;
+}

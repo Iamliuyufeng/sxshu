@@ -1,0 +1,498 @@
+/* 三峡表格通用样式 */
+.ant-table-wrapper.sx-table-normal {
+    .ant-table {
+        scrollbar-color: none;
+        .table-empty-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #00AAFF;
+            .ant-empty-description {
+                color: #00AAFF;
+            }
+        }
+
+        border-radius: 0;
+        background: transparent;
+        .ant-table-measure-row {
+            display: none;
+        }
+        .ant-table-container {
+            border-radius: 0!important;
+            border-start-start-radius: 0!important;
+            border-inline-start:1px solid #001732 !important;
+            border-top: 1px solid #001732 !important;
+            background: transparent;
+            table>thead>tr:first-child >*:first-child {
+                border-radius: 0;
+            }
+            table>thead>tr:first-child >*:last-child {
+                border-radius: 0;
+            }
+            .ant-table-header {
+                border-radius: 0;
+            }
+            .ant-table-content {
+                background: transparent;
+            }
+            .ant-table-thead {
+                tr {
+                    th {
+                        line-height: 16px;
+                        padding: 16px 12px;
+                        font-size: 16px;
+                        font-weight: normal;
+                        background: #093865!important;
+                        border-inline-end: 1px solid #001732 !important;
+                        height: 50px;
+                        border-bottom: none;
+                        color: #FFFFFF;
+                        font-style: normal;
+                        &:before {
+                            display: none;
+                        }
+                        &.ant-table-cell-scrollbar {
+                            width: 6px;
+                            padding: 0;
+                            border-left: none;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+            .ant-table-tbody {
+                tr {
+                    height: 42px;
+                }
+                tr.ant-table-placeholder {
+                    background-color:#0C609E;
+                    &:hover {
+                        background-color: #0C609E;
+                    }
+                }
+
+                td.ant-table-selection-column {
+                    text-align: center;
+                }
+
+                tr.ant-table-row-selected {
+                    .ant-table-cell {
+                        background-color: #0C609E;
+                    }
+                }
+
+                tr:nth-child(odd) {
+                    background: #093865;
+                }
+                tr:nth-child(even) {
+                    background: #04284D;
+                }
+                tr td.center {
+                    text-align: center;
+                }
+                tr td {
+                    color: #FFFFFF;
+                    text-align: left;
+                    padding: 4px 10px !important;
+                    border-inline-end: 1px solid #001732 !important;
+                    /* border-left: 1px solid #001732; */
+                    &.ant-table-cell-row-hover {
+                        background: #0d589f;
+                    }
+                }
+                tr:hover {
+
+                }
+            }
+        }
+        background: transparent;
+        .column-name {
+            color: #65BBE8;
+        }
+        td.ant-table-cell {
+            padding: 1px;
+            border-bottom: none;
+            text-align: center;
+        }
+    }
+}
+
+.ant-table-wrapper .ant-table {
+    scrollbar-color: auto;
+}
+
+/* 三峡表格通用样式 */
+.ant-table-wrapper.sx-table {
+    .ant-table {
+        background: transparent;
+        .ant-table-container {
+            border-radius: 0;
+            border-start-start-radius: 0;
+            background: transparent;
+            .ant-table-content {
+                background: transparent;
+            }
+            .ant-table-thead {
+                tr {
+                    th {
+                        line-height: 16px;
+                        font-size: 16px;
+                        font-weight: normal;
+                        padding: 6px;
+                        background-color: transparent!important;
+                        border-bottom: none;
+                        color: #65BBE8;
+                        font-style: normal;
+                        &:before {
+                            display: none;
+                        }
+
+                        &.ant-table-cell-scrollbar {
+                            width: 6px;
+                            padding: 0;
+                            border-left: none;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+            .ant-table-tbody {
+                tr.ant-table-placeholder {
+                    background-color:#0C609E;
+                    &:hover {
+                        background-color: #0C609E;
+                    }
+                }
+
+                tr:nth-child(odd) {
+                    background: #04284D;
+                }
+                tr:nth-child(even) {
+                    background: #093865;
+                }
+
+                tr td {
+                    padding: 6px 0;
+                    &.ant-table-cell-row-hover {
+                        background: #0d589f;
+                    }
+                }
+                tr:hover {
+
+                }
+            }
+        }
+        background: transparent;
+        .column-name {
+            color: #65BBE8;
+        }
+        td.ant-table-cell {
+            padding: 1px;
+            border-bottom: none;
+            text-align: center;
+        }
+    }
+}
+
+
+.ant-pagination {
+    margin: 8px;
+    button {
+        background: transparent;
+    }
+    li.ant-pagination-prev {
+        background-color: #093865;
+        border: 1px solid rgba(42,82,111,0.4);
+        .ant-pagination-item-link {
+            color: #ffffff4b;
+        }
+    }
+    li.ant-pagination-next {
+        background-color: #093865;
+        border: 1px solid rgba(42,82,111,0.4);
+        .ant-pagination-item-link {
+            color: #ffffff4b;
+        }
+    }
+    li.ant-pagination-item {
+        border-radius: 4px;
+        border: 1px solid rgba(42,82,111,0.6);
+        background-color: #093865;
+    }
+    li.ant-pagination-jump-next {
+        background-color: #093865;
+    }
+
+    li.ant-pagination-jump-prev {
+        background-color: #093865;
+    }
+    .ant-pagination-options-quick-jumper {
+        input {
+            background: transparent;
+        }
+    }
+    li.ant-pagination-item-active {
+        border: 1px solid #00F0FF;
+        a {
+            color: #00F0FF;
+        }
+    }
+}
+
+.ant-segmented {
+    width: 126px;
+    border-radius: 4px;
+    /* color: #B6B6B6; */
+    .ant-segmented-group {
+        padding: 2px;
+    }
+    .ant-segmented-thumb {
+        background: linear-gradient(#0C609E 0%, #2AB4EB 100%)!important;
+    }
+    .ant-segmented-item {
+        padding: 0 4px;
+    }
+    .ant-segmented-item-selected {
+        padding: 2px 8px;
+        background: linear-gradient(#0C609E 0%, #2AB4EB 100%);
+        border-radius: 4px;
+        color: #FFFFFF;
+        .ant-segmented-item-label {
+            min-height: 24px;
+            padding: 0 8px;
+            line-height: 24px;
+        }
+    }
+}
+.ant-picker {
+    .ant-picker-input>input::placeholder {
+        color: rgba(255,255,255,0.6);
+    }
+    .ant-picker-suffix {
+        color: rgba(255,255,255,0.6);
+    }
+    .ant-picker-separator {
+        color: rgba(255,255,255,0.6);
+    }
+}
+
+.ant-select-dropdown {
+    background: rgb(6, 72, 105);
+    .ant-select-item-option-active.ant-select-item-option-selected {
+        background: #093865;
+    }
+
+    .ant-select-item {
+        color: #fff;
+    }
+
+    .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+        background-color: #0C609E;
+        color: #fff;
+    }
+    .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+        background-color: #0C609E;
+    }
+}
+.ant-select {
+    .ant-select-arrow {
+        color: rgba(255,255,255,0.6);
+    }
+}
+
+.ant-select-disabled {
+    .ant-select-selector {
+        border: 1px solid rgba(255,255,255,0.6);
+    }
+    .ant-select-selection-item {
+        color: rgba(255,255,255,0.9);
+    }
+}
+
+.ant-select-single .ant-select-selector {
+    color: rgba(255,255,255,0.9);
+}
+
+.ant-picker-dropdown {
+    .ant-picker-header button {
+        color: #fff;
+    }
+    .ant-picker-range-arrow::before {
+        background: #042d68;
+    }
+    .ant-picker-cell {
+        color: rgba(255, 255, 255, 0.4);
+    }
+    .ant-picker-cell-in-view {
+        color: #fff;
+    }
+    .ant-picker-panel-container {
+        background: #042d68;
+    }
+    /* .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-disabled):before,
+    .ant-picker-cell-in-view.ant-picker-cell-in-range:not(.ant-picker-cell-disabled):before {
+        background-color: rgba(21, 154, 255, 0.2)!important;
+    } */
+}
+.ant-btn-primary {
+    background: linear-gradient( #0C609E 0%, #2AB4EB 100%);
+    &:hover {
+        background: linear-gradient( #0C609E 0%, #2AB4EB 100%);
+    }
+    &:active {
+        background: linear-gradient( #0C609E 0%, #2AB4EB 100%);
+    }
+    border: none;
+}
+
+.ant-modal {
+    .ant-modal-content {
+        background: #031C3C;
+        padding: 0;
+
+        .ant-modal-confirm-content, .ant-modal-confirm-title {
+            color: #FFFFFF;
+        }
+        .ant-modal-header {
+            background-color: transparent;
+            border-bottom: 1px solid rgba(42,82,111,0.4);
+            padding: 16px;
+            .ant-modal-title {
+                color: #FFFFFF;
+            }
+        }
+        .ant-modal-body {
+            padding: 16px;
+            border-bottom: 1px solid rgba(42,82,111,0.4);
+        }
+        .ant-modal-close {
+            color: #FFFFFF;
+        }
+    }
+}
+
+
+.ant-input-outlined {
+    background: rgba(23,206,255,0.1);
+    border-radius: 4px;
+    border: 1px solid #17CEFF;
+    color: #fff;
+
+    input::placeholder {
+        color: #ececec; /* 这里可以替换成你想要的颜色值，比如#0C609E */
+    }
+}
+
+textarea::placeholder {
+    color: #ececec; /* 这里可以替换成你想要的颜色值，比如#0C609E */
+}
+
+.ant-input-outlined:hover {
+    background: rgba(23,206,255,0.2);
+}
+
+.ant-input-outlined:focus-within {
+    background: rgba(23,206,255,0.1);
+    border-color: #84e3fd;
+    box-shadow: none;
+    box-sizing: none;
+}
+
+span.ant-tag.success {
+    background: rgba(1,254,166,0.1);
+    color: #FFFFFF;
+    border-radius: 2px;
+    border: 1px solid #01FEA6;
+    padding: 1px 14px
+}
+
+span.ant-tag.grayed {
+    background: transparent;
+    color: #FFFFFF;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 1px 14px
+}
+
+span.ant-tag.primary {
+    color: #FFFFFF;
+    background: rgba(0,170,255,0.1);
+    border-radius: 2px;
+    border: 1px solid #00AAFF;
+    padding: 1px 14px
+}
+span.ant-tag.warn {
+    color: #FFFFFF;
+    background: rgba(255,169,1,0.1);
+    border-radius: 2px;
+    border: 1px solid #FFA901;
+    padding: 1px 14px
+}
+span.ant-tag.error {
+    color: #FFFFFF;
+    background: rgba(252,86,1,0.1);
+    border-radius: 2px;
+    border: 1px solid #FC5601;
+    padding: 1px 14px
+}
+
+.ant-checkbox .ant-checkbox-inner {
+    background: #001732;
+    border-radius: 2px;
+    border: 1px solid #17CEFF;
+}
+
+.ant-radio-wrapper .ant-radio-checked .ant-radio-inner { 
+    border-color: #17CEFF!important;
+    background-color: #001732!important;
+}
+:where(.css-dev-only-do-not-override-12adzp0).ant-radio-wrapper .ant-radio-inner::after  {
+    background-color: #17CEFF!important;
+}
+
+.ant-radio-wrapper .ant-radio-inner {
+    background: #001732;
+    border-radius: 16px;
+    border: 1px solid #17CEFF;
+}
+
+.ant-btn.ant-btn-variant-outlined {
+    background: transparent!important;
+    color: #17CEFF;
+}
+
+.ant-btn.ant-btn-variant-outlined:disabled {
+    color: #CCC;
+    border-color: #ccc;
+}
+
+
+.ant-tabs {
+    .ant-tabs-nav {
+        margin-bottom: 0;
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.ant-tree {
+    color: #fff;
+    .ant-tree-treenode {
+        width: 100%;
+        &.ant-tree-treenode-selected {
+            background: rgba(0,240,255,0.2);
+            border-radius: 4px;
+            .ant-tree-node-selected {
+                background-color: transparent;
+                color: #00F0FF;
+            }
+        }
+    }
+}
+
+::placeholder {
+    color: #999999 !important; /* 自定义颜色，比如浅灰色 */
+    opacity: 1 !important; /* 解决部分浏览器透明度问题 */
+}

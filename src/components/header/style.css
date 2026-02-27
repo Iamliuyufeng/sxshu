@@ -1,0 +1,9 @@
+.sx-header {
+    height: 50px;
+}
+
+.sx-header .logo {
+    width: 445px;
+    border-image: linear-gradient(90deg, rgba(0, 144, 255, 0.1), rgba(112, 241, 254, 1), rgba(0, 135, 227, 0.1)) 2 2;
+    border: 2px solid;
+}

@@ -1,0 +1,39 @@
+$bgColor: #071f41;
+$bgColor2: #002140;
+$bgColor3: #003966;
+$bgColor4: #003159;
+$bgColor5: #00294d;
+$bgColor6: #001226;
+$borderColor: #01345c;
+$fontColor: #fff;
+$fontColor2: #619cc2;
+$fontColor3: #01b9b9;
+$hoverColor: #0075c2;
+
+.ant-message{
+  color: $fontColor;
+  .ant-message-notice-content{
+    background-color: $bgColor3;
+  }
+}
+
+
+/* 针对 Webkit 内核浏览器（Chrome、Edge、Safari 等） */
+/* 滚动条整体容器 */
+::-webkit-scrollbar {
+  width: 4px; /* 垂直滚动条宽度 */
+  height: 4px; /* 水平滚动条高度，若不需要可删除 */
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background: #001732; /* 轨道背景色 */
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  background: #0C609E; /* 滑块颜色 */
+  border-radius: 0; /* 若需要圆角可修改，比如2px，这里保持默认直角 */
+}
+
+

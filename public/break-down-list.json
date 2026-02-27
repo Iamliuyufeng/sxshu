@@ -1,0 +1,37 @@
+{
+    "items": [
+        {
+      "farm_id": "CN_12_N0001_W0001",
+      "farm_name": "天津三峡海上风电场",
+      "province": "安徽",
+      "ranking": 1,
+      "completeness": {
+        "dq_ratio": 0.98765,
+        "dq_score": 98.77
+      },
+      "consistency": {
+        "dq_ratio": 0.98765,
+        "dq_score": 98.77
+      },
+      "uniqueness": {
+        "dq_ratio": 0.98765,
+        "dq_score": 98.77
+      },
+      "validity": {
+        "dq_ratio": 0.98765,
+        "dq_score": 98.77
+      },
+      "accuracy": {
+        "dq_ratio": 0.98765,
+        "dq_score": 98.77
+      },
+      "total": {
+        "dq_ratio": 0.98765,
+        "dq_score": 98.77
+      }
+    }
+    ],
+    "count": 320,
+    "pageSize": 20,
+    "current": 1
+}

@@ -1,0 +1,48 @@
+/* 进度条容器：相对定位，用于承载绝对定位的箭头 */
+.progress-bar-container {
+    width: 100%;
+    /* 使用CSS变量接收组件传入的高度，提高灵活性 */
+    --bar-height: 8px;
+    --arrow-color: #00FADE; /* 箭头颜色（可与渐变结束色一致） */
+    position: relative;
+    padding: 20px 0; /* 预留箭头和数值的显示空间 */
+    box-sizing: border-box;
+  }
+  
+  /* 进度条背景：灰色底色，圆角 */
+  .progress-bar-bg {
+    width: 100%;
+    height: var(--bar-height);
+    background-color: #f5f5f5;
+    overflow: hidden; /* 隐藏超出的进度条 */
+    box-sizing: border-box;
+  }
+  
+  /* 动态进度条：渐变色，过渡动画 */
+  .progress-bar-fill {
+    height: 100%;
+    transition: width 0.3s ease-in-out; /* 进度变化时的平滑动画 */
+  }
+  
+  /* 进度箭头：向上的三角，绝对定位 */
+  .progress-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    /* CSS三角实现：边框法 */
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid var(--arrow-color); /* 向上的三角：下边框为实心，左右边框透明 */
+    /* 箭头居中对齐（配合JS计算的left值） */
+    transform: translateY(249%)
+  }
+  
+  /* 进度数值：可选，显示进度百分比 */
+  .progress-value {
+    position: absolute;
+    min-width: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    transform: translateX(-50%);
+  }

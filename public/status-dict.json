@@ -1,0 +1,54 @@
+{
+    "items": [
+      {
+        "key": "1",
+        "statusValue": 1,
+        "statusDesc": "解缆"
+      },
+      {
+        "key": "2",
+        "statusValue": 2,
+        "statusDesc": "启动"
+      },
+      {
+        "key": "3",
+        "statusValue": 3,
+        "statusDesc": "并网运行"
+      },
+      {
+        "key": "4",
+        "statusValue": 4,
+        "statusDesc": "故障"
+      },
+      {
+        "key": "5",
+        "statusValue": 5,
+        "statusDesc": "检修"
+      },
+      {
+        "key": "6",
+        "statusValue": 6,
+        "statusDesc": "维护"
+      },
+      {
+        "key": "7",
+        "statusValue": 7,
+        "statusDesc": "手动停机"
+      },
+      {
+        "key": "8",
+        "statusValue": 8,
+        "statusDesc": "检修"
+      },
+      {
+        "key": "9",
+        "statusValue": 9,
+        "statusDesc": "维护"
+      },
+      {
+        "key": "10",
+        "statusValue": 10,
+        "statusDesc": "手动停机"
+      }
+    ]
+  }

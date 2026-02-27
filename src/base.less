@@ -1,0 +1,181 @@
+body {
+  font-family: "Microsoft YaHei";
+}
+
+button {
+  /* min-width: 72px; */
+  background: linear-gradient(#0C609E 0%, #2AB4EB 100%);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 4px 12px;
+  height: 32px;
+}
+
+button.not-active {
+  background: rgba(42,180,235,0.5);
+}
+
+button.reset {
+    border: 1px solid #2AB4EB;
+    background: transparent;
+    color: #2AB4EB;
+}
+
+
+/* 普通按钮 - 鼠标悬浮效果 */
+button:hover {
+    /* 渐变颜色加深，模拟悬浮高亮 */
+    background: linear-gradient(#0a5088 0%, #1ea8e0 100%);
+    /* 可选：轻微放大，增强视觉反馈 */
+    transform: scale(1.02);
+    /* 可选：添加轻微阴影 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 普通按钮 - 点击按下效果 */
+  button:active {
+    /* 渐变颜色进一步加深，模拟按下状态 */
+    background: linear-gradient(#084070 0%, #1a98d0 100%);
+    /* 轻微缩小，模拟按下的物理反馈 */
+    transform: scale(0.98);
+    /* 阴影缩小，强化按下感 */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  
+/* 重置按钮 - 鼠标悬浮效果 */
+button.reset:hover {
+    /* 背景添加淡蓝色，文字和边框颜色加深 */
+    background: rgba(42, 180, 235, 0.1);
+    border-color: #1ea8e0;
+    color: #1ea8e0;
+  }
+  
+  /* 重置按钮 - 点击按下效果 */
+  button.reset:active {
+    /* 背景添加更深的淡蓝色，文字和边框颜色进一步加深 */
+    background: rgba(42, 180, 235, 0.2);
+    border-color: #1a98d0;
+    color: #1a98d0;
+  }
+  
+  /* 可选：添加按钮聚焦样式（提升可访问性） */
+  button:focus-visible {
+    box-shadow: 0 0 0 2px rgba(42, 180, 235, 0.5);
+    border-radius: 4px;
+  }
+.ant-tree .ant-tree-node-content-wrapper:hover {
+    background-color: transparent;
+}
+
+.flex-1 {
+    flex: 1;
+}
+.w-100 {
+    width: 100px;
+}
+.d-flex {
+    display: flex;
+}
+
+.lh-30 {
+    line-height: 30px;
+}
+
+.p-3 {
+    padding: 3px;
+}
+.m-5 {
+    margin: 5px;
+}
+
+.src-set_app_param-index-menuTree .ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected {
+    background-color: #01b9b9;
+}
+
+a {
+  color: #00F0FF;
+}
+
+.ant-btn-color-link.ant-btn-variant-link {
+  color: #00F0FF;
+}
+.sx-page {
+    flex: 1;
+    padding: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: #001732;
+    width: 100%;
+}
+
+.table-page {
+  background: #001732;
+  width: 100%;
+  flex: 1;
+  padding: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.content-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+    .action-bar {
+      display: flex;
+      color: #FFFFFF;
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .table-container {
+      flex: 1;
+      overflow: hidden;
+    }
+}
+
+.display-area {
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.8; /* 增大行高，提升可读性 */
+  color: #FFF;
+  /* 核心属性：保留换行，自动换行（避免横向滚动） */
+  white-space: pre-wrap;
+  /* 兼容处理：识别所有空白符（包括换行/空格） */
+  white-space: break-spaces;
+  /* 可选：首行缩进（仿文档效果） */
+  text-indent: 2em;
+  /* 可选：防止长文本溢出 */
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+
+/* 第一步：重置全局滚动条基础样式（提升优先级，去掉不必要的 !important） */
+/* 针对所有可滚动容器的 Webkit 滚动条 */
+*::-webkit-scrollbar {
+  width: 6px; /* 垂直滚动条宽度 */
+  height: 6px; /* 水平滚动条高度 */
+  background-color: #093865; /* 轨道基础背景（去掉 !important） */
+}
+
+/* 滚动条滑块 */
+*::-webkit-scrollbar-thumb {
+  background-color: #1C6199; /* 滑块颜色 */
+  border-radius: 3px; /* 可选：滑块圆角，更美观 */
+}
+
+/* 滑块 hover 状态（可省略，因为和默认滑块颜色一致） */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #1C6199;
+}
+
+/* 滚动条轨道 */
+*::-webkit-scrollbar-track {
+  background-color: #093865;
+  box-shadow: none;
+}

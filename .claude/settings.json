@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/liuyufeng/Documents/workspace/goldwind/sxshu-server/**)"
+    ]
+  }
+}
