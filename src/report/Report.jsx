@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { DatePicker, Table, Tag, Space, Button, Select } from 'antd'
+import { DatePicker, Table, Tag, Space, Button, Select, Modal } from 'antd'
 import CommonTablePage from '../components/common-table/ComonTablePage'
 import reportStore from '../store/report'
-import { downloadAttachment, getNodeRequestUrl, openAttachment } from '../utils/utils'
+import { downloadAttachment, getNodeRequestUrl, getFileNameFromPath } from '../utils/utils'
 import FormModal from '../components/form-modal/FormModal'
 import tableStoreFactory from '../store/useStatusBookStore'
 import { create, remove, update } from '../utils/colclient'
@@ -15,10 +15,32 @@ const { RangePicker } = DatePicker;
 
 const ReportPage = () => {
     const [visible, setVisible] = useState(false)
+    const [previewVisible, setPreviewVisible] = useState(false)
+    const [previewUrl, setPreviewUrl] = useState('')
+    const [previewTitle, setPreviewTitle] = useState('')
     const isAdmin = globals.getState().isAdmin
 
     const caseTableStore = tableStoreFactory.getTableStore('reports')
     const refreshTable = caseTableStore(state => state.refreshTable)
+
+    // 支持预览的文件类型
+    const PREVIEWABLE_TYPES = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp', 'svg', 'pdf', 'txt', 'json', 'html', 'xml']
+
+    const handlePreview = (attachment) => {
+        const fileName = getFileNameFromPath(attachment)
+        const ext = fileName.split('.').pop().toLowerCase()
+
+        if (PREVIEWABLE_TYPES.includes(ext)) {
+            // 支持预览，在 Modal 中打开
+            const url = getNodeRequestUrl(`/sxfile/download?relativePath=${attachment}`)
+            setPreviewUrl(url)
+            setPreviewTitle(fileName)
+            setPreviewVisible(true)
+        } else {
+            // 不支持预览，直接下载
+            downloadAttachment(attachment)
+        }
+    }
 
 
     const [query, setQuery] = useState({
@@ -77,7 +99,7 @@ const ReportPage = () => {
                         downloadAttachment(record.attachment)
                     }} type='link'>下载</Button>
                     <Button size='small'  type='link' onClick={() => {
-                        openAttachment(record.attachment)
+                        handlePreview(record.attachment)
                     }}>预览</Button>
                     {isAdmin && <Button size='small'  type='link' onClick={() => {
                         remove(record._id, 'reports')
@@ -169,7 +191,20 @@ const ReportPage = () => {
             refreshTable();
         }} onClose={() => {
             setVisible(false)
-        }}></FormModal></>
+        }}></FormModal>
+        <Modal
+            title={previewTitle}
+            open={previewVisible}
+            onCancel={() => setPreviewVisible(false)}
+            footer={null}
+            width={800}
+            style={{ top: 20 }}
+        >
+            <iframe
+                src={previewUrl}
+                style={{ width: '100%', height: '70vh', border: 'none' }}
+            />
+        </Modal></>
 }
 
 export default ReportPage
