@@ -6,6 +6,7 @@ import { downloadAttachment, getNodeRequestUrl, openAttachment } from '../utils/
 import FormModal from '../components/form-modal/FormModal'
 import tableStoreFactory from '../store/useStatusBookStore'
 import { create, remove, update } from '../utils/colclient'
+import globals from '../store/globals'
 
 import './style.less'
 
@@ -14,6 +15,7 @@ const { RangePicker } = DatePicker;
 
 const ReportPage = () => {
     const [visible, setVisible] = useState(false)
+    const isAdmin = globals.getState().isAdmin
 
     const caseTableStore = tableStoreFactory.getTableStore('reports')
     const refreshTable = caseTableStore(state => state.refreshTable)
@@ -77,10 +79,10 @@ const ReportPage = () => {
                     <Button size='small'  type='link' onClick={() => {
                         openAttachment(record.attachment)
                     }}>预览</Button>
-                    <Button size='small'  type='link' onClick={() => {
+                    {isAdmin && <Button size='small'  type='link' onClick={() => {
                         remove(record._id, 'reports')
                         refreshTable()
-                    }}>删除</Button>
+                    }}>删除</Button>}
                     <Button size='small'  type='link' onClick={() => {
                         if (record.status === 'prepare') {
                             update(record._id, { status: 'published' }, 'reports').then(() => {
@@ -162,7 +164,8 @@ const ReportPage = () => {
             setVisible(true)
         }}>报告上传</button></>} requestUrl={getNodeRequestUrl('/coll/reports/list')} query={tableQuery} columns={columns} />
         <FormModal visible={visible} fields={fields} onConfirm={async object => {
-            const result = await create(object, 'reports');
+            const userId = globals.getState().userId;
+            const result = await create({ ...object, publisher: userId }, 'reports');
             refreshTable();
         }} onClose={() => {
             setVisible(false)
