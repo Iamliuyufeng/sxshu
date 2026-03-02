@@ -280,9 +280,9 @@ const ReviewTablePage = () => {
                     onChange={(_, dateStrings) => setTimeRange(dateStrings)} />
         <button className="main" onClick={handleQuery}>查询</button>
         <button className="reset" onClick={handleReset}>重置</button>
-        <button style={{
+        {/* <button style={{
           marginLeft: 'auto'
-        }}>报告上传</button>
+        }}>报告上传</button> */}
   </>} storeName='review' requestUrl={requestUrl} query={query} columns={columns} ></CommonTablePage>
 }
 

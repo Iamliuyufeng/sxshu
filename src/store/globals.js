@@ -12,6 +12,7 @@ const useStore = create((set) => ({
 
   userProvinces: ['山西', '河北'], // 用户有权限的省
   userId: 'zhang_wei83',  // 用户账号
+  // userId: '',  // 用户账号
   userSites: [], // 用户有权限的场站
   isAdmin: true, // 用户是否是管理员
 
@@ -52,10 +53,11 @@ const useStore = create((set) => ({
     const resData = await fetchData(getNodeRequestUrl('/permision/resources'));
     if (resData) {
       console.log('用户有权限的省', resData.result)
+      console.log('用户权限信息', resData)
         set({
           // 假设接口返回的数据结构如下，根据实际接口返回字段调整
           userProvinces: resData.result.map(sh => sh.name),
-          userId: resData.userId,
+          userId: resData.userId || resData.username,
           isAdmin: resData.isAdmin
         });
       } else {

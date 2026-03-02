@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { DatePicker, Table, Tag, Space, Button, Select, Modal } from 'antd'
 import CommonTablePage from '../components/common-table/ComonTablePage'
 import reportStore from '../store/report'
-import { downloadAttachment, getNodeRequestUrl, getFileNameFromPath } from '../utils/utils'
+import { downloadAttachment, getNodeRequestUrl, getFileNameFromPath, formatIsoToDate } from '../utils/utils'
 import FormModal from '../components/form-modal/FormModal'
 import tableStoreFactory from '../store/useStatusBookStore'
 import { create, remove, update } from '../utils/colclient'
@@ -15,10 +15,10 @@ const { RangePicker } = DatePicker;
 
 const ReportPage = () => {
     const [visible, setVisible] = useState(false)
-    const [previewVisible, setPreviewVisible] = useState(false)
-    const [previewUrl, setPreviewUrl] = useState('')
-    const [previewTitle, setPreviewTitle] = useState('')
-    const isAdmin = globals.getState().isAdmin
+
+    // 订阅 globals 状态变化
+    const isAdmin = globals(state => state.isAdmin)
+    const userId = globals(state => state.userId)
 
     const caseTableStore = tableStoreFactory.getTableStore('reports')
     const refreshTable = caseTableStore(state => state.refreshTable)
@@ -29,13 +29,11 @@ const ReportPage = () => {
     const handlePreview = (attachment) => {
         const fileName = getFileNameFromPath(attachment)
         const ext = fileName.split('.').pop().toLowerCase()
+        const url = getNodeRequestUrl(`/sxfile/download?relativePath=${attachment}`)
 
         if (PREVIEWABLE_TYPES.includes(ext)) {
-            // 支持预览，在 Modal 中打开
-            const url = getNodeRequestUrl(`/sxfile/download?relativePath=${attachment}`)
-            setPreviewUrl(url)
-            setPreviewTitle(fileName)
-            setPreviewVisible(true)
+            // 支持预览，新窗口打开
+            window.open(url, '_blank')
         } else {
             // 不支持预览，直接下载
             downloadAttachment(attachment)
@@ -64,6 +62,7 @@ const ReportPage = () => {
             title: '发布时间',
             width: 240,
             dataIndex: 'published',
+            render: value => formatIsoToDate(value),
         },
         {
             title: '发布状态',
@@ -102,16 +101,24 @@ const ReportPage = () => {
                         handlePreview(record.attachment)
                     }}>预览</Button>
                     {isAdmin && <Button size='small'  type='link' onClick={() => {
-                        remove(record._id, 'reports')
-                        refreshTable()
+                        Modal.confirm({
+                            title: '确认删除',
+                            content: '确定要删除该报告吗？',
+                            okText: '确认',
+                            cancelText: '取消',
+                            onOk: () => {
+                                remove(record._id, 'reports')
+                                refreshTable()
+                            }
+                        })
                     }}>删除</Button>}
-                    <Button size='small'  type='link' onClick={() => {
+                    {isAdmin && <Button size='small'  type='link' onClick={() => {
                         if (record.status === 'prepare') {
                             update(record._id, { status: 'published' }, 'reports').then(() => {
                                 refreshTable()
                             })
                         }
-                    }} disabled={record.status === 'published'}>推送</Button>
+                    }} disabled={record.status === 'published'}>推送</Button>}
                 </div>
             }
         }
@@ -148,7 +155,6 @@ const ReportPage = () => {
         label: '报告文件', // 补充label字段，用于表单标签
         required: true
     }];
-
     return <><CommonTablePage storeName='reports' actionBar={<>
         <div>报告状态</div>
         <Select value={query.status}
@@ -180,31 +186,19 @@ const ReportPage = () => {
                 status: ''
             })
         }}>重置</button>
-        <button style={{
+        {isAdmin && <button style={{
             marginLeft: 'auto'
         }} onClick={() => {
             setVisible(true)
-        }}>报告上传</button></>} requestUrl={getNodeRequestUrl('/coll/reports/list')} query={tableQuery} columns={columns} />
+        }}>报告上传</button>}</>} requestUrl={getNodeRequestUrl('/coll/reports/list')} query={tableQuery} columns={columns} />
         <FormModal visible={visible} fields={fields} onConfirm={async object => {
-            const userId = globals.getState().userId;
+            console.log('userId:', userId)
+            console.log('提交数据:', { ...object, publisher: userId })
             const result = await create({ ...object, publisher: userId }, 'reports');
             refreshTable();
         }} onClose={() => {
             setVisible(false)
-        }}></FormModal>
-        <Modal
-            title={previewTitle}
-            open={previewVisible}
-            onCancel={() => setPreviewVisible(false)}
-            footer={null}
-            width={800}
-            style={{ top: 20 }}
-        >
-            <iframe
-                src={previewUrl}
-                style={{ width: '100%', height: '70vh', border: 'none' }}
-            />
-        </Modal></>
+        }}></FormModal></>
 }
 
 export default ReportPage

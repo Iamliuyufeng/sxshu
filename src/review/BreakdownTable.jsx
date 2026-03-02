@@ -388,9 +388,9 @@ const BreakDownTablePage = () => {
                     onChange={(_, dateStrings) => setTimeRange(dateStrings)} />
         <button className="main" onClick={handleQuery}>查询</button>
         <button className="reset" onClick={handleReset}>重置</button>
-        <button style={{
+        {/* <button style={{
           marginLeft: 'auto'
-        }}>报告上传</button>
+        }}>报告上传</button> */}
     </>
     } storeName='break-down' columns={columns} requestUrl={requestUrl} query={query} pageSizeKey="page_size"></CommonTablePage>
 

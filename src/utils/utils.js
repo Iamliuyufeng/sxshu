@@ -247,6 +247,28 @@ const formatIsoToDate = (isoStr) => {
   }
 }
 
+/**
+ * 格式化ISO时间为完整日期时间
+ * @param {string} isoStr - ISO格式时间字符串（如 2025-12-26T10:08:26.077Z）
+ * @returns {string} 格式化后的日期时间（如 2025-12-26 10:08:26）
+ */
+const formatIsoToDateTime = (isoStr) => {
+  if (!isoStr) return ''; // 空值处理
+  try {
+    const date = new Date(isoStr);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  } catch (error) {
+    console.error('时间格式转换失败：', error);
+    return '';
+  }
+}
+
 
 /**
  * 从文件路径中提取文件名（兼容 Windows(\) 和 Unix(/) 路径分隔符）
@@ -286,6 +308,7 @@ export {
   getFileNameFromPath,
   getNodeRequestUrl,
   formatIsoToDate,
+  formatIsoToDateTime,
   fetchData,
   getCssAlignedGradientColor,
   processAppealData,
