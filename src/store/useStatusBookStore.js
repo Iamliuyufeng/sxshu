@@ -78,6 +78,7 @@ class TableStoreFactory {
             const pageKey = options.pageKey || 'page'
             // 优先使用 options 中传入的 page 值，否则使用 state 中的 current
             const pageValue = options.page !== undefined ? options.page : state.tableState.current
+
             const requestParams = {
               [pageSizeKey]: state.tableState.pageSize,
               [currentKey]: state.tableState.current,

@@ -4,9 +4,17 @@ import CommonTablePage from '../components/common-table/ComonTablePage'
 import bookStore from '../store/book'
 import { provincesList } from '../store/mock'
 import { fetchData, getNodeRequestUrl } from '../utils/utils'
+import useStore from '../store/globals'
 
 
 import tableStoreFactory from '../store/useStatusBookStore'
+
+// 是否使用 mock 数据（设为 false 时使用真实接口）
+const USE_MOCK = false;
+// API 前缀
+const API_PREFIX = window.API_PREFIX;
+// 请求 URL（根据开关选择 mock 或真实接口）
+const requestUrl = USE_MOCK ? '/public/status-book/list.json' : `${API_PREFIX}/farm`;
 
 const SiteManagePage = () => {
   const columns = [
@@ -19,16 +27,18 @@ const SiteManagePage = () => {
     },
     {
       title: '场站ID',
-      dataIndex: 'pms_ne_station__id',
-      key: 'pms_ne_station__id',
-      width: 120,
+      // dataIndex: 'pms_ne_station__id',
+      // key: 'pms_ne_station__id',
+      dataIndex: 'id',
+      key: 'id',
+      width: 180,
       align: 'left'
     },
     {
       title: '所属省份',
       width: 120,
-      dataIndex: 'province',
-      key: 'province',
+      dataIndex: 'province_name',
+      key: 'province_name',
       align: 'center'
     },
     {
@@ -49,23 +59,33 @@ const SiteManagePage = () => {
       key: 'name_pms',
       align: 'left'
     },
-    {
-      title: '设计容量(MW)',
+     {
+      title: '装机容量(MW)',
       width: 160,
       dataIndex: 'capacity',
       key: 'capacity',
       align: 'center'
     },
-    {
-      title: '总装机容量(MW)',
-      width: 160,
-      dataIndex: 'rated_capacity',
-      key: 'rated_capacity',
-      align: 'center'
-    }
+    // {
+    //   title: '设计容量(MW)',
+    //   width: 160,
+    //   dataIndex: 'capacity',
+    //   key: 'capacity',
+    //   align: 'center'
+    // },
+    // {
+    //   title: '总装机容量(MW)',
+    //   width: 160,
+    //   dataIndex: 'rated_capacity',
+    //   key: 'rated_capacity',
+    //   align: 'center'
+    // }
   ]
 
-  const [query, setQuery] = useState({})
+  const [query, setQuery] = useState({ page_size: 20 })
+  // 获取省份数据
+  const provincesList = useStore(state => state.provinces);
+  console.log(provincesList);
 
   const provinceTreeData =  [
       {
@@ -75,7 +95,7 @@ const SiteManagePage = () => {
           return {
             "isLeaf": true,
             title: r.label,
-            key: r.label
+            key: r.value
           }
         })
       }
@@ -120,7 +140,8 @@ const SiteManagePage = () => {
           height: '100%'
         }}
       >
-        <CommonTablePage storeName='sites' requestUrl={getNodeRequestUrl('/coll/sites/list')} columns={columns} query={query}/>
+        {/* <CommonTablePage storeName='sites' requestUrl={getNodeRequestUrl('/coll/sites/list')} columns={columns} query={query}/> */}
+        <CommonTablePage storeName='sites' requestUrl={requestUrl} columns={columns} query={query}/>
       </div>
     </div>
   )

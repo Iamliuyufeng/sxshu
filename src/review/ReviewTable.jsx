@@ -233,6 +233,10 @@ const ReviewTablePage = () => {
         dataIndex: 'farm_name',
       },
       {
+        title: '场站类别',
+        dataIndex: 'farm_type_desc',
+      },
+      {
         title: '主接线图',
         dataIndex: 'pwd',
         render: (value) => value?.dq_score,

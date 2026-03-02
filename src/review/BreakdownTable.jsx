@@ -320,6 +320,10 @@ const BreakDownTablePage = () => {
       dataIndex: 'farm_name',
     },
     {
+      title: '场站类型',
+      dataIndex: 'farm_type_desc',
+    },
+    {
       title: '总得分',
       dataIndex: 'total',
       width: '140px',

@@ -90,7 +90,8 @@ const useStore = create((set) => ({
 
     // 如果 API_PREFIX 已定义，调用真实接口
     if (typeof API_PREFIX !== 'undefined') {
-      let url = `${API_PREFIX}/farm`;
+      // let url = `${API_PREFIX}/farm`;
+      let url = `${API_PREFIX}/farm/options`;
 
       if (province) {
         url += `?province=${province}`;

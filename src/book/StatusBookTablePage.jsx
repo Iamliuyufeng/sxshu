@@ -4,6 +4,12 @@ import CommonTablePage from '../components/common-table/ComonTablePage'
 import LocalTable from '../components/common-table/LocalTable'
 import LabelValue from '../components/label-value/LabelValue'
 import { getNodeRequestUrl } from '../utils/utils'
+// 是否使用 mock 数据（设为 false 时使用真实接口）
+const USE_MOCK = false;
+// API 前缀
+const API_PREFIX = window.API_PREFIX;
+// 请求 URL（根据开关选择 mock 或真实接口）
+const requestUrl = USE_MOCK ? '/public/status-book/list.json' : `${API_PREFIX}/farm`;
 const StatusBookTable = () => {
   const [detailViewModalVisible, setDetailViewModalVisible] = useState(false)
   const columns = [
@@ -13,8 +19,8 @@ const StatusBookTable = () => {
     { title: '设备类型', dataIndex: 'equipment_type', key: 'equipment_type', width: 160, align: 'left' },
     { title: '设备型号', dataIndex: 'equipment_model', key: 'equipment_model', width: 220, align: 'left' },
     { title: '额定功率(kW)', dataIndex: 'rated_active_power', key: 'rated_active_power', width: 140, align: 'left' },
-    { title: '电力产系统逻辑编码', dataIndex: 'logical_id', key: 'logical_id', align: 'left' },
-    { title: '电力产系统物理名称', dataIndex: 'physical_name', key: 'physical_name', align: 'left' },
+    { title: '电力生产管理系统中的逻辑编码', dataIndex: 'logical_id', key: 'logical_id', align: 'left' },
+    { title: '电力生产管理系统中的物理名称', dataIndex: 'physical_name', key: 'physical_name', align: 'left' },
     {
       title: '操作',
       width: 160,
@@ -83,7 +89,8 @@ const StatusBookTable = () => {
 
   return (
     <>
-      <CommonTablePage storeName='status-book' requestUrl={getNodeRequestUrl(`/coll/status-book/list`)} columns={columns} query={{}}/>
+      {/* <CommonTablePage storeName='status-book' requestUrl={getNodeRequestUrl(`/coll/status-book/list`)} columns={columns} query={{}}/> */}
+      <CommonTablePage storeName='status-book' requestUrl={requestUrl} columns={columns} query={{page_size: 20}}/>
       <DetailModal />
     </>
   )
